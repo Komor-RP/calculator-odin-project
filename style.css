@@ -1,0 +1,83 @@
+h1 {
+  font-family: "Roboto Condensed";
+}
+body {
+  background-color: #cecece;
+}
+#calculator-container {
+  background-color: #006384;
+  width: 360px;
+  height: 520px;
+  margin: 60px auto;
+  border-radius: 10px;
+  box-shadow: 2px 5px 10px #00465d;
+}
+#screen {
+  width: 320px;
+  height: 60px;
+  background-color: #89b6c5;
+  margin: 20px auto;
+  display: block;
+  position: relative;
+  top: 20px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px gray inset, -1px 2px 5px 1px gray inset;
+}
+#screen h1#numberInput {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  right: 0;
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+
+#buttons {
+  width: 320px;
+  height: 400px;
+  margin: 20px auto;
+  position: relative;
+  top: 20px;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.button {
+  width: 80px;
+  text-align: center;
+  background-color: #009ed2;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #008fbf;
+}
+.button:active {
+  box-shadow: 5px 5px 15px inset #007298, -5px -5px 15px inset #007298;
+}
+.button.helpButton, .button.operationButton {
+  background-color: #ff9470;
+}
+.button.helpButton:hover, .button.operationButton:hover {
+  background-color: #ff7749;
+}
+.button.helpButton:active, .button.operationButton:active {
+  box-shadow: 5px 5px 15px inset #ff5922, -5px -5px 15px inset #ff5922;
+}
+#enterButton {
+  flex-grow: 2;
+  background-color: #00d29e;
+}
+#enterButton:hover {
+  background-color: #00bf8f;
+}
+#enterButton:active {
+  box-shadow: 5px 5px 15px inset #009872, -5px -5px 15px inset #009872;
+}
+.button h1 {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
