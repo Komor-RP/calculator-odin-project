@@ -42,6 +42,11 @@ function calculatorRun(userInput) {
     screenDisplay = "";
   }
 
+  if ((userInput == ".") && (!screenDisplay.includes("."))) {
+    screenDisplay += userInput;
+    screen.textContent = screenDisplay;
+  }
+
   if ((userInput == "CE") && (screenDisplay!= " ")) {
     screenDisplay= screenDisplay.slice(0, screenDisplay.length-1);
     screen.textContent = screenDisplay;
@@ -80,7 +85,7 @@ function enterPress(userInput) {
       console.log(result);
       break;
     default:
-      console.log("default hit");
+      result = Number(screenDisplay);
       console.log(result);
       break;
   }
