@@ -16,7 +16,6 @@ function clickHandler(e) {
 }
 
 function calculatorRun(userInput) {
-  console.log(userInput);
   if (userInput == "÷"){
     userInput = "/";
   }
@@ -38,7 +37,6 @@ function calculatorRun(userInput) {
   }else if (userInput.match(/[x\/\+\-]/) && (userInput != "+/-")){
     inputs.push(screenDisplay);
     operation = userInput;
-    console.log("operation: " + operation);
     screenDisplay = "";
   }
 
@@ -77,16 +75,13 @@ function enterPress(userInput) {
     case "/":
       operation = "";
       result = divide(Number(inputs.pop()), Number(inputs.pop()));
-      console.log(result);
       break;
     case "x":
       operation = "";
       result = multiply(Number(inputs.pop()), Number(inputs.pop()));
-      console.log(result);
       break;
     default:
       result = Number(screenDisplay);
-      console.log(result);
       break;
   }
   if ((result > 9999999999999) || (result < -9999999999999)) {
